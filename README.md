@@ -2,11 +2,11 @@
 
 ## Project Structure
 
-- data/
+- data
   - churn.csv
-- notebooks/
+- notebooks
   - customer_churn_analysis.ipynb
-- visuals/
+- visuals
 - customer_churn_project.py
 - requirements.txt
 
@@ -30,13 +30,13 @@ Build an end-to-end analytics and machine learning workflow to predict customer 
 1. Create and activate a Python virtual environment.
 2. Install dependencies:
 
-```bash
+bash
 pip install -r requirements.txt
 ```
 
 ## Run
 
-```bash
+bash
 python customer_churn_project.py
 ```
 
