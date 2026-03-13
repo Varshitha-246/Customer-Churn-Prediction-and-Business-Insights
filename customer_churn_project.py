@@ -21,19 +21,11 @@ sns.set_style("whitegrid")
 
 
 def load_dataset() -> pd.DataFrame:
-    """Load churn dataset from data/churn.csv, with a safe fallback to available file name."""
-    preferred_path = Path("data") / "churn.csv"
-    fallback_path = Path("data") / "Telco_Cusomer_Churn.csv"
+    """Load churn dataset from data/churn.csv."""
+    data_path = Path("data") / "churn.csv"
 
-    if preferred_path.exists():
-        data_path = preferred_path
-    elif fallback_path.exists():
-        data_path = fallback_path
-        print(f"[INFO] data/churn.csv not found. Using fallback dataset: {fallback_path}")
-    else:
-        raise FileNotFoundError(
-            "Dataset not found. Expected data/churn.csv (or fallback data/Telco_Cusomer_Churn.csv)."
-        )
+    if not data_path.exists():
+        raise FileNotFoundError("Dataset not found. Expected data/churn.csv.")
 
     df = pd.read_csv(data_path)
     print("\nFirst 5 rows:")

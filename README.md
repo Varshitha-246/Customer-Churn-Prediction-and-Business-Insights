@@ -4,7 +4,6 @@
 
 - data/
   - churn.csv
-  - Telco_Cusomer_Churn.csv
 - notebooks/
   - customer_churn_analysis.ipynb
 - visuals/
